@@ -10,11 +10,11 @@ import AboutTerminal from './components/AboutTerminal'
 import Contact from './components/Contact'
 
 const NAV_LINKS = [
-  { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Projects', href: 'projects' },
+  { label: 'Skills', href: 'skills' },
+  { label: 'Experience', href: 'experience' },
+  { label: 'About', href: 'about' },
+  { label: 'Contact', href: 'contact' },
 ]
 
 function App() {
@@ -50,7 +50,7 @@ function App() {
     e.preventDefault()
     const targetId = href.replace('#', '')
     const element = document.getElementById(targetId)
-    
+
     if (element) {
       setMenuOpen(false)
       const offset = 52 // Navbar height
@@ -98,8 +98,8 @@ function App() {
         }}
       >
         {/* Wordmark */}
-        <a 
-          href="#" 
+        <a
+          href="#"
           onClick={(e) => handleNavClick(e, '#hero')}
           style={{ fontWeight: 700, fontSize: '1.0625rem', letterSpacing: '-0.03em', color: 'var(--text-primary)', textDecoration: 'none' }}
         >
@@ -115,12 +115,12 @@ function App() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                style={{ 
-                  fontSize: '0.875rem', 
-                  fontWeight: 500, 
-                  color: isActive ? 'var(--text-primary)' : 'var(--text-secondary)', 
-                  textDecoration: 'none', 
-                  letterSpacing: '-0.01em', 
+                style={{
+                  fontSize: '0.875rem',
+                  fontWeight: 500,
+                  color: isActive ? 'var(--text-primary)' : 'var(--text-secondary)',
+                  textDecoration: 'none',
+                  letterSpacing: '-0.01em',
                   transition: 'color var(--transition-fast)',
                   position: 'relative'
                 }}
@@ -131,18 +131,18 @@ function App() {
               >
                 {link.label}
                 {isActive && (
-                  <motion.span 
+                  <motion.span
                     layoutId="nav-dot"
-                    style={{ 
-                      position: 'absolute', 
-                      bottom: '-6px', 
-                      left: '50%', 
-                      transform: 'translateX(-50%)', 
-                      width: '4px', 
-                      height: '4px', 
-                      borderRadius: '50%', 
-                      background: 'var(--accent-blue)' 
-                    }} 
+                    style={{
+                      position: 'absolute',
+                      bottom: '-6px',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      width: '4px',
+                      height: '4px',
+                      borderRadius: '50%',
+                      background: 'var(--accent-blue)'
+                    }}
                   />
                 )}
               </a>
@@ -221,13 +221,13 @@ function App() {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  style={{ 
-                    fontSize: '1.0625rem', 
-                    fontWeight: 500, 
-                    color: isActive ? 'var(--accent-blue)' : 'var(--text-primary)', 
-                    textDecoration: 'none', 
-                    letterSpacing: '-0.02em', 
-                    padding: '0.25rem 0' 
+                  style={{
+                    fontSize: '1.0625rem',
+                    fontWeight: 500,
+                    color: isActive ? 'var(--accent-blue)' : 'var(--text-primary)',
+                    textDecoration: 'none',
+                    letterSpacing: '-0.02em',
+                    padding: '0.25rem 0'
                   }}
                 >
                   {link.label}
